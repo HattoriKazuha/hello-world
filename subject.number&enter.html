@@ -4,19 +4,34 @@
 <head>
 <meta charset="utf-8">
 <title>实验平台</title>
+<style>
+body
+{background-image:url('work.jpg');
+background-position:center center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:cover;
+background-color:#98FB98}
+h1
+{text-align:center;font-size:3em}
+p.num{text-align:center;font-size:1.5em}
+p.notes{text-align:center;text-indent:50px;}
+</style>
 </head>
 
 <body>
 <h1>欢迎来到本实验</h1>
-<p>您的试验编号如下:</p>
+<p class="num">您的试验编号如下:</p>
 
+<div align="center";style="font-size:2em;font-weight:bold;">
 <script>
 var d = new Date();
 var n = d.getMinutes(); 
 document.write(n+7);
 </script>
+</div>
 
-<p>该编号是您的唯一编号，请记住该编号，在接下来的实验中填写，准备好后点击开始试验进入正式试验。</p>
+<p class="notes">该编号是您的唯一编号，请记住该编号，在接下来的实验中填写，准备好后点击开始试验进入正式试验。</p>
 
  <script language="javascript">
    function randomurl(){
@@ -25,11 +40,13 @@ document.write(n+7);
      url[1]="subject.e2.html";
      url[2]="subject.e3.html";
      var ints=Math.ceil(Math.random()*100)%3;
-     window.location=url[ints];  
+     window.open(url[ints]);  
     }
  </script>
- 
+
+<div align="center"> 
 <a href="javascript:randomurl()">开始实验</a>
+</div>
 
 </body>
 
